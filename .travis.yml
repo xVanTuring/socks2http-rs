@@ -1,0 +1,16 @@
+language: rust
+rust: stable
+cache: cargo
+
+os: 
+  - linux
+  - osx
+  - windows
+before_deploy: cargo build --release --verbose
+deploy:
+  provider: releases
+  file: ./target/release/socks2http
+  skip_cleanup: true
+  on:
+    tags: true
+  draft: true
