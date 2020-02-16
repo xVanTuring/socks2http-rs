@@ -20,14 +20,14 @@ fn main() {
                 .short("l")
                 .long("local-addr")
                 .takes_value(true)
-                .help("Local HTTP bind addr, provide with `127.0.0.1:1081`"),
+                .help("Local HTTP bind addr: `127.0.0.1:1081`"),
         )
         .arg(
             Arg::with_name("SOCKS5_ADDR")
                 .short("s")
                 .long("socks5-addr")
                 .takes_value(true)
-                .help("Socks5 proxy addr, provided with `1.1.1.1:1080`"),
+                .help("Socks5 proxy addr: `1.1.1.1:1080`"),
         )
         .about("A simple http proxy which converts socks5 to http")
         .get_matches();
